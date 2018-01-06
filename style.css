@@ -1,25 +1,32 @@
-#paragraph1 {
-	max-width: 800px;
+html {
 	font-family: 'Concert One', cursive;
 }
-
 
 #header {
 	font-family: 'Concert One', cursive;
 	padding: 1rem 1rem 2rem 1rem;
 }
 
-
-.img {
-  padding: 1rem 1rem;
-}
-
 #carouselId {
-	max-width: 800px;
+	margin-right: 6%;
 
 }
 
-#rightPanel {
-	max-width: 800px;
-	font-family: 'Concert One', cursive;
+#cvSection {
+	margin-left: 6%
+
+}
+
+.hvr:hover {
+	color: red;
+}
+
+#circle {
+	width: 100px;
+	height: 100px;
+	border-radius: 50px;
+	margin: auto;
+	border-style: dashed;
+	border-width: 2px;
+	border-color: red;
 }
