@@ -1,32 +1,88 @@
-html {
-	font-family: 'Concert One', cursive;
+body {
+	margin: 0;
+	font-family: 'Roboto Mono', monospace;
+	color: white;
 }
 
-#header {
-	font-family: 'Concert One', cursive;
-	padding: 1rem 1rem 2rem 1rem;
+.parent {
+	display: flex;
+	flex-flow: row wrap;
 }
 
-#carouselId {
-	margin-right: 6%;
-
+.parent > * {
+	flex: 1 100%;
 }
 
-#cvSection {
-	margin-left: 6%
-
+.nav-bar {
+	background: navy;
+	display: flex;
+	flex-flow: row wrap;
+	width: auto;
+	border-width: 0px 0px 5px 0px;
+	border-color: skyblue;
+	border-style: solid;
+	font-family: 'Roboto Mono', monospace;
+	justify-content: center;
 }
 
-.hvr:hover {
-	color: red;
+.nav-panel {
+	padding: 15px;
+	border: none;
+	display: none;
+	flex-flow: 1 auto;
 }
 
-#circle {
-	width: 100px;
-	height: 100px;
-	border-radius: 50px;
-	margin: auto;
-	border-style: dashed;
-	border-width: 2px;
-	border-color: red;
+.link {
+	color: white;
+	text-decoration: none;
+	margin-right: 30px;
+	font-size: 20px;
+}
+
+.about-me {
+	background: black;
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.projects {
+	background: navy;
+}
+
+img {
+	width: 100%;
+	height: auto;
+	margin: 0;
+}
+
+.link:hover {
+	color: #ebf9ae;
+	text-decoration: underline;
+}
+
+.header {
+	float: left;
+	font-size: 40px;
+	color: white;
+	font-weight: bold;
+	flex: 5 auto;
+	text-align: center;
+}
+
+@media  all and (min-width: 770px) {
+	.nav-panel {display: flex;}
+	.projects {flex: 2; margin: 3%;}
+	.about-me {flex: 2; margin: 3% 0 3% 3%;}
+}
+
+.icon-download {
+	width: 14%;
+	height: auto;
+	margin: 0;
+}
+
+.about-me.download-bar {
+	display: inline-block;
+	width: auto;
+	float: right;
 }
