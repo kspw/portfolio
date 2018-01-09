@@ -1,88 +1,129 @@
 body {
 	margin: 0;
-	font-family: 'Roboto Mono', monospace;
-	color: white;
-}
-
-.parent {
-	display: flex;
-	flex-flow: row wrap;
-}
-
-.parent > * {
-	flex: 1 100%;
-}
-
-.nav-bar {
-	background: navy;
-	display: flex;
-	flex-flow: row wrap;
-	width: auto;
-	border-width: 0px 0px 5px 0px;
-	border-color: skyblue;
-	border-style: solid;
-	font-family: 'Roboto Mono', monospace;
-	justify-content: center;
-}
-
-.nav-panel {
-	padding: 15px;
-	border: none;
-	display: none;
-	flex-flow: 1 auto;
-}
-
-.link {
-	color: white;
-	text-decoration: none;
-	margin-right: 30px;
-	font-size: 20px;
-}
-
-.about-me {
-	background: black;
-	display: flex;
-	flex-flow: row wrap;
-}
-
-.projects {
-	background: navy;
+	font-family: 'Merriweather Sans', sans-serif;
 }
 
 img {
 	width: 100%;
 	height: auto;
+	margin: 1rem;
+}
+
+
+
+.grid {
+	display: grid;
+	grid-template-columns: [start] 2fr [col2] 2fr [col3] 0.5fr [end];
+	grid-auto-rows: minmax(200px, auto);
+	width: 100%;
+	grid-gap: 0.5rem;
+}
+
+.top-panel {
+	width: 100%;f
+	height: 4rem;
+	background: radial-gradient(circle, #44004f, #2e0035, #160019);
+	position: fixed;
+	top: 0px;
+	opacity: 0.7;
+}
+
+.navigation-menu {
+	display: flex;
 	margin: 0;
+	justify-content: center;
+	height: 4rem;
+}
+
+.navigation-menu .cv-download {
+	width: 12rem;
+	margin-left: 6rem;
+}
+
+.cv-download > a {
+	text-decoration: none;
+	color: #707c02;
+}
+
+.navigation-menu > li {
+	display: block;
+	border: solid 1px black;
+	width: 8rem;
+	color: #707c02;
+	text-align: center;
+	padding: auto;
+	padding-top: 1.2rem;
+	font-size: 1rem;
+	font-family: 'Lobster', cursive;
+	border-radius: 1rem;
+	margin-right: 1rem;
+}
+
+.navigation-menu > li:hover {
+	background-color: #93009b;
+	color: #b6c904;
+	border-width: 2.0px;
+}
+
+.grid .image {
+	grid-column: start/col3;
+	grid-row: 1/6;
+	background-image: url(coffe.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center 0;
+	opacity: 0.7;
+}
+
+.grid .right-panel {
+	grid-column: col3/end;
+	grid-row: 1/6;
+	background: radial-gradient(circle,#dbdbdb, #bcbcbc, #878787);
+	display: flex;
+	flex-flow: column;
+	justify-content: space-around;
+}
+
+.right-panel > h2{
+	padding: 1rem;
+	margin-top: 30%;
+	text-align: center;
+
+
+}
+
+.grid .projects {
+	grid-column: start/end;
+	background: radial-gradient(circle,#dbdbdb, #bcbcbc, #878787);
+}
+
+.text-1 {
+	background-color: #b6c904;
+	top: 20%;
+	left: 10%;
+	width: 600px;
+	height: auto;
+	position: absolute;
+	border-radius: 5px;
+	font-size: 2rem;
+	padding: 1rem;
 }
 
 .link:hover {
-	color: #ebf9ae;
-	text-decoration: underline;
+	opacity: 0.8;
 }
 
-.header {
-	float: left;
-	font-size: 40px;
-	color: white;
-	font-weight: bold;
-	flex: 5 auto;
-	text-align: center;
-}
+@media all and (max-width: 800px) {
+	.grid .image {grid-column: start/end; grid-row: 1/6;}
+	.grid .right-panel {
+		grid-column: start/end;
+		grid-row: 6/7;
+		flex-flow: row wrap;
+	}
 
-@media  all and (min-width: 770px) {
-	.nav-panel {display: flex;}
-	.projects {flex: 2; margin: 3%;}
-	.about-me {flex: 2; margin: 3% 0 3% 3%;}
-}
-
-.icon-download {
-	width: 14%;
-	height: auto;
-	margin: 0;
-}
-
-.about-me.download-bar {
-	display: inline-block;
-	width: auto;
-	float: right;
+	.right-panel .link {flex: 46%; padding: 2%;}
+	.right-panel > h2 {width: 100%; margin-top: 4%;}
+	.grid .projects {grid-column: start/end; grid-row: 7/8;}
+	.text-1 {width: 70%; font-size: 1.5rem; top: 13%;}
+	.navigation-menu .cv-download {margin-left: 0;}
 }
