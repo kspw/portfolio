@@ -51,7 +51,6 @@ img {
 	width: 8rem;
 	color: #707c02;
 	text-align: center;
-	padding: auto;
 	padding-top: 1.2rem;
 	font-size: 1rem;
 	font-family: 'Lobster', cursive;
@@ -63,6 +62,49 @@ img {
 	background-color: #93009b;
 	color: #b6c904;
 	border-width: 2.0px;
+}
+
+#dropdown {
+	height: 11.3rem;
+	border-width: 0;
+	padding-top: 0;
+}
+
+#dropdown > section {
+	margin-bottom: 0;
+	margin-top: 0;
+	border: solid 1px black;
+	border-radius: 1rem;
+	display: block;
+	height: 2.7rem;
+	padding-top: 1.2rem;
+}
+
+.dropdown-content {
+	display: none;
+}
+
+#dropdown:hover .dropdown-content {
+	display: flex;
+	flex-flow: column;
+	justify-content: flex-start;
+
+}
+
+
+.dropdown-content > div {
+	padding-top: 0.35rem;
+	border-bottom: solid 1px black;
+	padding-bottom: 0.3rem;
+	border-radius: 0.8rem;
+	background: radial-gradient(circle, #44004f, #2e0035, #160019);
+}
+
+.dropdown-content > div:hover {
+	border: solid 2px #04ff00;
+	color: #04ff00;
+	border-width: 2.0px;
+	opacity: 1;
 }
 
 .grid .image {
@@ -92,9 +134,23 @@ img {
 
 }
 
-.grid .projects {
+.grid .about-me {
 	grid-column: start/end;
 	background: radial-gradient(circle,#dbdbdb, #bcbcbc, #878787);
+}
+
+.about-me .about-me-content {
+	display: flex;
+	flex-flow: row wrap;
+	height: auto;
+	background: white;
+	margin: 2rem;
+	justify-content: space-around;
+}
+
+.about-me-content > div {
+	width: 35%;
+	font-size: 1.5rem;
 }
 
 .text-1 {
@@ -123,7 +179,8 @@ img {
 
 	.right-panel .link {flex: 46%; padding: 2%;}
 	.right-panel > h2 {width: 100%; margin-top: 4%;}
-	.grid .projects {grid-column: start/end; grid-row: 7/8;}
-	.text-1 {width: 70%; font-size: 1.5rem; top: 13%;}
+	.grid .about-me {grid-column: start/end; grid-row: 7/8;}
+	.text-1 {width: 70%; font-size: 1.4rem; top: 13%;}
 	.navigation-menu .cv-download {margin-left: 0;}
+	.about-me-content > div {font-size: 1rem; width: auto;}
 }
