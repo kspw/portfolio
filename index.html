@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link href="https://fonts.googleapis.com/css?family=Lobster|Merriweather+Sans" rel="stylesheet">
 	<title></title>
@@ -29,7 +31,7 @@
 
 		<div class="right-panel">
 			<h2>Things I hate in life</h2>
-			<a class="link" href="#"><img src="flower-1.jpeg"></a>
+			<a class="link" href="google/index.html"><img src="google.jpg"></a>
 			<a class="link" href="#"><img src="flower-2.jpeg"></a>
 			<a class="link" href="#"><img src="flower-3.jpeg"></a>
 			<a class="link" href="#"><img src="flower-4.jpeg"></a>
@@ -61,27 +63,42 @@
 
 	<!-- Projects I've done showcase -->
 
-	<div class="sketch-it">
-		<h1>Sketch It</h1>
-		ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-				ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-				ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-	</div>
+	<!-- Rock - Paper - Scisors -->
+
+
+	  <div id = "buttons">
+	    <button class="btn" id = "rock" data = "rock">ROCK</button>
+	    <button class="btn" id = "paper" data = "paper">PAPER</button>
+	    <button class="btn" id = "scisors" data = "scisors">SCISCORS</button>   
+	  </div>
+
+	  <div class="score-box">
+	  <div class = "score">
+	    <p class="name">player</p>
+	    <p id = "playerScore">0</p>
+	  </div>
+	  <div class = "score">
+	    <p class="name">comp</p>
+	    <p id = "compScore">0</p>
+	  </div>
+	  <div class = "score">
+	    <p class="name">round played</p>
+	    <p id = "totalScore">0</p>
+	  </div>
+
+	 </div>
+
+
+
+	<!--Youtub video -->
+
+	<iframe width="840px" height="630px"
+src="https://www.youtube.com/embed/WhAnCq1W0KM">
+</iframe>
+
+	<iframe width="840px" height="630px"
+src="https://www.youtube.com/embed/HujV3O2ubmw">
+</iframe>
 
 
 
@@ -103,7 +120,7 @@
 			<li class="cv-download"><a href="CV.txt" download="CV.txt">Download My CV</a></li>
 		</ul>
 	</div>
-
+	<script src="script.js"></script>
 </body>
 </html>
 
